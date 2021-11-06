@@ -6,7 +6,14 @@
         <v-flex xs12 v-for="newsArticle in newsArticles" :key="newsArticle.id">
           <v-card>
             <v-container fluid grid-list-lg>
-              <v-layout row>
+              <router-link
+                :to="{ path: '/route' }"
+                 style="text-decoration: none; color: inherit;"
+                active-class=""
+                exact-path-active-class=""
+                exact-active-class=""
+              >
+              <v-layout row >
                 <v-flex xs7>
                   <div>
                     <div class="subheading font-weight-medium">
@@ -31,6 +38,8 @@
                   ></v-img>
                 </v-flex>
               </v-layout>
+              </router-link>
+
             </v-container>
           </v-card>
         </v-flex>
@@ -42,7 +51,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator';
+import { Component, Prop, Vue, Watch, } from 'vue-property-decorator';
 import { NewsArticle } from '@/types';
 
 @Component
