@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1,
+    "title": "Vue.js is the absolute rockstar of the JavaScript ecosystem",
+    "content": "Article coming soon",
+    "dateString": "22 Jan 2019",
+    "baseImageName": "winner",
+    "articleType": "TOP_STORY",
+    "isFavourite": true
+  },
+  {
+    "id": 2,
+    "title": "Ljubljanski potniški promet - linija 6",
+    "content": "0.4",
+    "dateString": "18.10.2021 - automatically detected",
+    "baseImageName": "bus",
+    "articleType": "CODE_EXAMPLE",
+    "isFavourite": false
+  },
+  {
+    "id": 15,
+    "title": "Slovenske železnice",
+    "content": "0.5",
+    "dateString": "18.11.2021 - automatically detected",
+    "baseImageName": "train",
+    "articleType": "CODE_EXAMPLE",
+    "isFavourite": false
+  },
+  {
+    "id": 16,
+    "title": "Ljubljanski potniški promet - linija 6",
+    "content": "0.3",
+    "dateString": "18.10.2021 - automatically detected",
+    "baseImageName": "bus",
+    "articleType": "CODE_EXAMPLE",
+    "isFavourite": false
+  },
+  {
+    "id": 17,
+    "title": "Car",
+    "content": "3",
+    "dateString": "18.10.2021 - automatically detected",
+    "baseImageName": "car",
+    "articleType": "CODE_EXAMPLE",
+    "isFavourite": false
+  },
+  {
+    "id": 3,
+    "title": "The hottest tools in coding this year included React and Python",
+    "content": "Article coming soon",
+    "dateString": "20 Jan 2019",
+    "baseImageName": "working",
+    "articleType": "TOP_STORY",
+    "isFavourite": false
+  },
+  {
+    "id": 5,
+    "title": "Creating native mobile apps without writing native code",
+    "content": "Article coming soon",
+    "dateString": "18 Jan 2019",
+    "baseImageName": "phone",
+    "articleType": "TOP_STORY",
+    "isFavourite": true
+  }
+]

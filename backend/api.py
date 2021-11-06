@@ -20,14 +20,12 @@ def getBicycle():
 #pošlji maile prek infobip
 @app.route("/sendEmail",methods=['GET'])
 def sendEmail():
-    print(request.args.get('user'))
-    functions.sendEmail()
+    functions.sendEmail(print(request.args.get('recipient')))
     return "0"
 
 @app.route("/sendSms",methods=['GET'])
 def sendSms():
-    print(request.args.get('user'))
-    functions.sendSms()
+    functions.sendSms(request.args.get('num'))
     return "0"
 
 if __name__ == '__main__':
