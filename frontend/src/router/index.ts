@@ -30,7 +30,7 @@ const router = new Router({
       path: '/code-examples',
       name: 'code-examples',
       component: CodeExamples,
-      meta: new RouteMeta({ title: 'Code Examples' })
+      meta: new RouteMeta({ title: 'Routes' })
     },
     {
       path: '/my-favorites',

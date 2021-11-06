@@ -8,17 +8,17 @@
     color="primary"
   >
     <v-btn value="top" :to="{ path: '/'}">
-      <span>Top Stories</span>
+      <span>Home</span>
       <v-icon>thumb_up</v-icon>
     </v-btn>
 
     <v-btn value="code" :to="{ name: 'code-examples'}">
-      <span>Code Examples</span>
+      <span>Recent routes</span>
       <v-icon>code</v-icon>
     </v-btn>
 
     <v-btn value="favorites" :to="{ name: 'my-favorites'}">
-      <span>Favorites</span>
+      <span>Challenges</span>
       <v-icon>favorite</v-icon>
     </v-btn>
   </v-bottom-navigation>

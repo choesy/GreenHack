@@ -7,17 +7,12 @@
           <v-card>
             <v-container fluid grid-list-lg>
               <v-layout row>
-                <v-flex xs7>
+                <v-flex xs9>
                   <div>
                     <div class="subheading font-weight-medium">
                       {{ newsArticle.title }}
                     </div>
                     <div>{{ newsArticle.dateString }}</div>
-                  </div>
-                </v-flex>
-                <v-flex xs2>
-                  <div class="subheading font-weight-small">
-                      <strong>{{ newsArticle.content }} kg C0<small>2</small></strong>
                   </div>
                 </v-flex>
                 <v-flex xs3>

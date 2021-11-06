@@ -2,6 +2,9 @@ import { ArticleType, NewsArticle } from '@/types';
 
 const url = '/data/articles.json';
 
+
+
+
 class NewsService {
   getArticlesByType (articleType: ArticleType): Promise<NewsArticle[]> {
     return fetch(url)
