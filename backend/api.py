@@ -21,6 +21,11 @@ def getBicycle():
     response.headers.add('Access-Control-Allow-Origin', '*')
     return response
 
+@app.route("/getAvant",methods=['GET'])
+def getAvant():
+    response=jsonify(functions.getAvant())
+    response.headers.add('Access-Control-Allow-Origin', '*')
+    return response
     
 #pošlji maile prek infobip
 @app.route("/sendEmail",methods=['GET'])

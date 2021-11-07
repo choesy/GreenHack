@@ -43,10 +43,14 @@ def getPath(line):
 def getBicycle():
     response=requests.get("https://api.ontime.si/api/v1/bicikelj/",headers={'content-type':'application/json','X-CSRFToken':'SIXrNXvPfaWUWlrfCopl7DtwlwwU9sXzoKoxyJ6UDC3k1VoevWx2SEaFno6QgEpO'})
     data=json.loads(response.text)
-    data={"points":[[float(data["results"][i]["lat"]),float(data["results"][i]["lng"])]for i in range(len(data["results"]))]}
+    data={"points":[[float(data["results"][i]["lat"]),float(data["results"][i]["lng"]),data["results"][i]["location_name"]]for i in range(len(data["results"]))]}
     return data
 
-
+def getAvant():
+    response=requests.get("https://api.ontime.si/api/v1/avant2go/",headers={'content-type':'application/json','X-CSRFToken':'SIXrNXvPfaWUWlrfCopl7DtwlwwU9sXzoKoxyJ6UDC3k1VoevWx2SEaFno6QgEpO'})
+    data=json.loads(response.text)
+    data={"points":[[float(data["results"][i]["lat"]),float(data["results"][i]["lng"]),data["results"][i]["location_name"]]for i in range(len(data["results"]))]}
+    return data
 def sendSms():
 
     """
