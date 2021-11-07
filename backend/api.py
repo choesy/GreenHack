@@ -1,4 +1,4 @@
-from flask import Flask,render_template,redirect,request
+from flask import Flask,render_template,redirect,request,jsonify
 import functions
 app = Flask(__name__)
 
@@ -8,13 +8,18 @@ def index_page():
 
 @app.route("/getPath",methods=['GET'])
 def getPath():
-    data=functions.getPath()
-    return data
+    line=request.args.get("line")
+    if line is None:
+        line=6
+    response = jsonify(functions.getPath(line))
+    response.headers.add('Access-Control-Allow-Origin', '*')
+    return response
 
 @app.route("/getBicycles",methods=['GET'])
 def getBicycle():
-    data=functions.getBicycle()
-    return data
+    response=jsonify(functions.getBicycle())
+    response.headers.add('Access-Control-Allow-Origin', '*')
+    return response
 
     
 #pošlji maile prek infobip

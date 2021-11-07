@@ -32,17 +32,19 @@ def sendEmail():
     #print("Status Code: " + str(response.status_code))
     #print(response.json())
 
-def getPath():
-    response=requests.get("https://api.ontime.si/api/v1/lpp/route-shapes/?groups=3",headers={'content-type':'application/json','X-CSRFToken':'SIXrNXvPfaWUWlrfCopl7DtwlwwU9sXzoKoxyJ6UDC3k1VoevWx2SEaFno6QgEpO'})
+def getPath(line):
+    response=requests.get("https://api.ontime.si/api/v1/lpp/route-shapes/?groups="+str(line),headers={'content-type':'application/json','X-CSRFToken':'SIXrNXvPfaWUWlrfCopl7DtwlwwU9sXzoKoxyJ6UDC3k1VoevWx2SEaFno6QgEpO'})
     data=json.loads(response.text)
-    data=str(data["results"][0]["trips"][0]["shape"])
+    print(data)
+    data={"points":[[float(dat["lat"]),float(dat["lng"])]for dat in data["results"][0]["trips"][0]["shape"]]}
+    
     return data
 
 def getBicycle():
     response=requests.get("https://api.ontime.si/api/v1/bicikelj/",headers={'content-type':'application/json','X-CSRFToken':'SIXrNXvPfaWUWlrfCopl7DtwlwwU9sXzoKoxyJ6UDC3k1VoevWx2SEaFno6QgEpO'})
     data=json.loads(response.text)
-    data=[{"lat":data["results"][i]["lat"],"lng":data["results"][i]["lng"]} for i in range(len(data["results"]))]
-    return str(data)
+    data={"points":[[float(data["results"][i]["lat"]),float(data["results"][i]["lng"])]for i in range(len(data["results"]))]}
+    return data
 
 
 def sendSms():
