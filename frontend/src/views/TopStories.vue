@@ -16,13 +16,11 @@ import { Component, Vue } from 'vue-property-decorator';
 import newsService from '../services/newsService';
 import NewsList from '../components/NewsList.vue';
 import { ArticleType, NewsArticle } from '@/types';
-import { GChart } from 'vue-google-charts';
 
 
 @Component({
   components: {
     NewsList,
-    GChart
   }
 })
 export default class TopStories extends Vue {
@@ -39,7 +37,7 @@ export default class TopStories extends Vue {
 
       ],
       chartOptions: {
-          title: "Co2 stat",
+          title: "Co2 Statistics",
           pieHole: 0.8,
           legend: 'none',
           slices: {
