@@ -1,10 +1,10 @@
 from flask import Flask,render_template,redirect,request,jsonify
 import functions
-app = Flask(__name__)
+app = Flask(__name__,static_url_path='/static')
 
 @app.route("/")
 def index_page(): 
-    return render_template("base.html")
+    return app.send_static_file('index.html')
 
 @app.route("/getPath",methods=['GET'])
 def getPath():
