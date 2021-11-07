@@ -25,7 +25,7 @@ const router = new Router({
       path: '/',
       name: 'top-stories',
       component: TopStories,
-      meta: new RouteMeta({ title: 'Top Stories' })
+      meta: new RouteMeta({ title: 'Home' })
     },
     {
       path: '/code-examples',
@@ -37,7 +37,7 @@ const router = new Router({
       path: '/my-favorites',
       name: 'my-favorites',
       component: MyFavorites,
-      meta: new RouteMeta({ title: 'Favorites' })
+      meta: new RouteMeta({ title: 'Challenges' })
     },
     {
       path: '/route',

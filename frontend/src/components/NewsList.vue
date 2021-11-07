@@ -7,7 +7,7 @@
           <v-card>
             <v-container fluid grid-list-lg>
               <router-link
-                :to="{ path: '/route' }"
+                :to="{ path: '/' }"
                  style="text-decoration: none; color: inherit;"
                 active-class=""
                 exact-path-active-class=""
@@ -24,7 +24,9 @@
                 </v-flex>
                 <v-flex xs2>
                   <div class="subheading font-weight-small">
+                    <template v-if="newsArticle.content">
                       <strong>{{ newsArticle.content }} kg C0<small>2</small></strong>
+                    </template>
                   </div>
                 </v-flex>
                 <v-flex xs3>
@@ -43,19 +45,23 @@
             </v-container>
           </v-card>
         </v-flex>
-
       </v-layout>
+
     </v-container>
+    <v-layout row wrap>
+
+    </v-layout>
 
   </div>
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue, Watch, } from 'vue-property-decorator';
+import { Component, Prop, Vue, Watch,  } from 'vue-property-decorator';
 import { NewsArticle } from '@/types';
 
 @Component
 export default class NewsList extends Vue {
   @Prop({ type: Array, required: true }) newsArticles!: NewsArticle[];
+
 }
 </script>
