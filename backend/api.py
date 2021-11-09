@@ -1,10 +1,14 @@
-from flask import Flask,render_template,redirect,request,jsonify
+from flask import Flask,send_from_directory,redirect,request,jsonify
 import functions
 app = Flask(__name__,static_url_path='/static')
 
+@app.route("/static/<path:path>")
+def static_dir(path):
+    return send_from_directory("static", path)
+
 @app.route("/")
 def index_page(): 
-    return app.send_static_file('index.html')
+    return send_from_directory("static",'index.html')
 
 @app.route("/getPath",methods=['GET'])
 def getPath():

@@ -10,17 +10,12 @@
 </head>
 <body>
 <div id="wmap"></div>
-<select name="linije" id="line_id">
-    <option value="3">3</option>
-    <option value="6">6</option>
-    <option value="7">7</option>
-    <option value="9">9</option>
-  </select>
-<button onclick="drawpath()">Prikazi avtobusno linijo</button>
-<button onclick="addbicycles()">Prikazi BicikeLj postaje</button>
-<button onclick="rmbicycles()">Odstrani BicikeLj postaje</button>
-<button onclick="addavant()">Prikazi Avant2Go postaje </button>
-<button onclick="rmavant()">Odstrani Aavant2Go postaje</button>
+<input type="text" id="line_id" name="fname">
+<button onclick="drawpath()">draw</button>
+<button onclick="addbicycles()">addbicycles</button>
+<button onclick="rmbicycles()">rmbicycles</button>
+<button onclick="addavant()">addavant</button>
+<button onclick="rmavant()">rmavant</button>
 <script src="world_map.js"></script>
 </body>
 </html>
